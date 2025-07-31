@@ -26,7 +26,7 @@ digits = load_digits()
 X = digits.data / 16.0               # normalize 0–16 → 0–1
 y = digits.target.reshape(-1, 1)
 
-enc = OneHotEncoder(sparse_output=False)
+enc = OneHotEncoder(sparse_output=False) # sparse=false or sparse_output=false
 y_onehot = enc.fit_transform(y)
 
 X_train, X_test, y_train, y_test = train_test_split(
